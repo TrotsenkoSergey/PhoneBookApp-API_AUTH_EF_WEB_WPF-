@@ -361,3 +361,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/AuthServer.API/Authentication.db
+/AuthServer.API/Authentication.db-shm
+/AuthServer.API/Authentication.db-wal

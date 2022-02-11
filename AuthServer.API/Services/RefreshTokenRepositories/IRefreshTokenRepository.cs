@@ -9,5 +9,7 @@ namespace AuthServer.API.Services.RefreshTokenRepositories
         Task<RefreshToken> GetByToken(string token);
         Task Create(RefreshToken refreshToken);
         Task Delete(Guid id);
+
+        Task DeleteAll(Guid userId);
     }
 }

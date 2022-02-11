@@ -26,6 +26,13 @@ namespace AuthServer.API.Services.RefreshTokenRepositories
             return Task.CompletedTask;
         }
 
+        public Task DeleteAll(Guid userId)
+        {
+            _refreshTokens.RemoveAll(r => r.UserId == userId);
+
+            return Task.CompletedTask;
+        }
+
         public Task<RefreshToken> GetByToken(string token)
         {
             RefreshToken refreshToken = _refreshTokens.FirstOrDefault(r => r.Token == token);
